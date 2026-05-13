@@ -1,187 +1,311 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Ian M. Down, Ph.D. | Aerospace Engineering</title> 
-    <style> 
-        :root { 
-            --primary-blue: #00008B; /* Dark Navy Blue */
-            --text-dark: #333333; 
-            --bg-light: #f8f9fa; 
-            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1); 
-        } 
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            background-color: var(--bg-light); 
-            color: var(--text-dark); 
-            margin: 0; 
-            padding: 40px 20px; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            min-height: 100vh; 
-            box-sizing: border-box; 
-        } 
-        .container { 
-            width: 100%; 
-            max-width: 800px; 
-        } 
-        .profile-card { 
-            background: #ffffff; 
-            padding: 35px 40px; 
-            border-radius: 12px; 
-            box-shadow: var(--card-shadow); 
-            text-align: center; 
-            border-top: 5px solid var(--primary-blue); 
-            margin-bottom: 40px; 
-        } 
-        h1 { 
-            font-size: 2.2rem; 
-            margin: 0 0 16px 0; 
-            color: #111111; 
-        } 
-        .degree-block { 
-            margin-bottom: 12px; 
-        } 
-        .degree-block:last-of-type { 
-            margin-bottom: 0; 
-        } 
-        .degree-title { 
-            font-size: 1.15rem; 
-            font-weight: 600; 
-            color: #222222; 
-            margin: 0 0 2px 0; 
-        } 
-        .institution { 
-            font-size: 0.95rem; 
-            color: var(--primary-blue); 
-            margin: 0; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            letter-spacing: 0.5px; 
-        } 
-        .publications-section { 
-            background: #ffffff; 
-            padding: 30px 40px; 
-            border-radius: 12px; 
-            box-shadow: var(--card-shadow); 
-        } 
-        h2 { 
-            font-size: 1.5rem; 
-            color: var(--primary-blue); 
-            margin-top: 0; 
-            margin-bottom: 20px; 
-            border-bottom: 2px solid #eaeaea; 
-            padding-bottom: 10px; 
-        } 
-        .pub-list { 
-            list-style: none; 
-            padding: 0; 
-            margin: 0; 
-        } 
-        .pub-item { 
-            margin-bottom: 25px; 
-            padding-bottom: 20px; 
-            border-bottom: 1px solid #f0f0f0; 
-            display: flex; 
-            flex-direction: column; 
-        } 
-        .pub-item:last-child { 
-            margin-bottom: 0; 
-            padding-bottom: 0; 
-            border-bottom: none; 
-        } 
-        .citation { 
-            font-size: 1.05rem; 
-            line-height: 1.6; 
-            color: #444444; 
-            margin-bottom: 12px; 
-        } 
-        .citation a { 
-            color: var(--primary-blue); 
-            text-decoration: none; 
-            word-break: break-all;
-        } 
-        .citation a:hover { 
-            text-decoration: underline; 
-        } 
-        .pdf-link { 
-            align-self: flex-start; 
-            display: inline-flex; 
-            align-items: center; 
-            background-color: var(--primary-blue); 
-            color: #ffffff; 
-            text-decoration: none; 
-            padding: 6px 14px; 
-            font-size: 0.85rem; 
-            font-weight: 600; 
-            border-radius: 4px; 
-            transition: background-color 0.2s ease; 
-        } 
-        .pdf-link:hover { 
-            background-color: #000066; 
-        } 
-    </style> 
-</head> 
-<body> 
-    <div class="container"> 
-        <!-- Profile Header --> 
-        <div class="profile-card"> 
-            <h1>Ian M. Down, Ph.D.</h1> 
-            <!-- PhD Info --> 
-            <div class="degree-block"> 
-                <div class="degree-title">Ph.D. in Aerospace Engineering, 2025</div> 
-                <div class="institution">Texas A&M University</div> 
-            </div> 
-            <!-- BS Info --> 
-            <div class="degree-block"> 
-                <div class="degree-title">B.S. in Aerospace Engineering, 2021</div> 
-                <div class="institution">University of Maryland</div> 
-            </div> 
-        </div> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian M. Down, Ph.D. | Aerospace Engineering</title>
 
-        <!-- Publications Section --> 
-        <div class="publications-section"> 
-            <h2>Selected Journal Publications</h2> 
-            <ul class="pub-list"> 
-                <!-- Publication 5 --> 
-                <li class="pub-item"> 
-                    <div class="citation"> 
-                        Ahrens, T. L., <strong>Ian M. Down</strong>, & Majji, M., "Direct Pseudospectral Optimal Control by Orthogonal Polynomial Integral Collocation," <em>Journal of Guidance, Control, and Dynamics</em>, 49 (5), <a href="doi.org" target="_blank">doi.org</a>, 2026. 
-                    </div> 
-                    <a href="2026%20JGCD%20DOPIC.pdf" class="pdf-link" target="_blank">Download PDF</a> 
-                </li> 
-                <!-- Publication 4 --> 
-                <li class="pub-item"> 
-                    <div class="citation"> 
-                        <strong>Ian M. Down</strong>, Majji, M., & Howell, K. C., "On-Manifold Low-Thrust Rephasing of Quasi-Periodic Orbits," <em>Journal of Guidance, Control, and Dynamics</em>, 49 (5), <a href="doi.org" target="_blank">doi.org</a>, 2026. 
-                    </div> 
-                    <a href="2026%20JGCD%20On%20Manifold%20QPO.pdf" class="pdf-link" target="_blank">Download PDF</a> 
-                </li> 
-                <!-- Publication 3 --> 
-                <li class="pub-item"> 
-                    <div class="citation"> 
-                        <strong>Ian M. Down</strong>, Howell, K. C., Majji, M., & Alfriend, K. T., "The Linear Parametrization of Two Dimensional Tori Families in the Restricted Three Body Problem," <em>The Journal of the Astronautical Sciences</em>, 73 (2), 12, <a href="doi.org" target="_blank">doi.org</a>, 2026. 
-                    </div> 
-                    <a href="2026%20JAS%20Linear%20Parametrization%20of%20Tori.pdf" class="pdf-link" target="_blank">Download PDF</a> 
-                </li> 
-                <!-- Publication 2 --> 
-                <li class="pub-item"> 
-                    <div class="citation"> 
-                        McElreath, J., <strong>Ian M. Down</strong>, & Majji, M., "A universal approach for solving the multi-revolution Lambert’s problem," <em>Celestial Mechanics and Dynamical Astronomy</em>, 137 (4), 22, <a href="https://doi.org" target="_blank">https://doi.org</a>, 2025. 
-                    </div> 
-                    <a href="2025%20CMDA%20Universal%20Lambert.pdf" class="pdf-link" target="_blank">Download PDF</a> 
-                </li> 
-                <!-- Publication 1 --> 
-                <li class="pub-item"> 
-                    <div class="citation"> 
-                        <strong>Ian M. Down</strong>, van Wijk, D. E., Parikh, D., & Majji, M., "Autonomous Satellite Servicing Infrastructure for In-Space Assembly and Manufacturing," <em>Journal of Manufacturing Science and Engineering</em>, 146 (12), 121008, <a href="doi.org" target="_blank">doi.org</a>, 2024. 
-                    </div> 
-                    <a href="2024%20JMSE%20TPODS%20GNC.pdf" class="pdf-link" target="_blank">Download PDF</a> 
-                </li> 
-            </ul> 
-        </div> 
-    </div> 
-</body> 
+    <style>
+        :root {
+            --primary-blue: #00008B;
+            --text-dark: #333333;
+            --bg-light: #f8f9fa;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05),
+                            0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                         Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            padding: 35px 40px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            border-top: 5px solid var(--primary-blue);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 0 0 16px 0;
+            color: #111111;
+        }
+
+        .degree-block {
+            margin-bottom: 12px;
+        }
+
+        .degree-block:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .degree-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #222222;
+            margin: 0 0 2px 0;
+        }
+
+        .institution {
+            font-size: 0.95rem;
+            color: var(--primary-blue);
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .publications-section {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        .pub-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pub-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pub-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .citation {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #444444;
+            margin-bottom: 12px;
+        }
+
+        .citation a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .citation a:hover {
+            text-decoration: underline;
+        }
+
+        .pdf-link {
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--primary-blue);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+
+        .pdf-link:hover {
+            background-color: #000066;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Profile Header -->
+        <div class="profile-card">
+
+            <h1>Ian M. Down, Ph.D.</h1>
+
+            <!-- PhD Info -->
+            <div class="degree-block">
+                <div class="degree-title">
+                    Ph.D. in Aerospace Engineering, 2025
+                </div>
+                <div class="institution">
+                    Texas A&amp;M University
+                </div>
+            </div>
+
+            <!-- BS Info -->
+            <div class="degree-block">
+                <div class="degree-title">
+                    B.S. in Aerospace Engineering, 2021
+                </div>
+                <div class="institution">
+                    University of Maryland
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Publications Section -->
+        <div class="publications-section">
+
+            <h2>Selected Journal Publications</h2>
+
+            <ul class="pub-list">
+
+                <!-- Publication 5 -->
+                <li class="pub-item">
+                    <div class="citation">
+                        Ahrens, T. L., <strong>Ian M. Down</strong>, &amp; Majji, M.,
+                        "Direct Pseudospectral Optimal Control by Orthogonal Polynomial Integral Collocation,"
+                        <em>Journal of Guidance, Control, and Dynamics</em>,
+                        49 (5), 2026.
+                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.2514/1.G008845"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            https://doi.org/10.2514/1.G008845
+                        </a>
+                    </div>
+
+                    <a href="2026%20JGCD%20DOPIC.pdf"
+                       class="pdf-link"
+                       target="_blank">
+                        Download PDF
+                    </a>
+                </li>
+
+                <!-- Publication 4 -->
+                <li class="pub-item">
+                    <div class="citation">
+                        <strong>Ian M. Down</strong>, Majji, M., &amp; Howell, K. C.,
+                        "On-Manifold Low-Thrust Rephasing of Quasi-Periodic Orbits,"
+                        <em>Journal of Guidance, Control, and Dynamics</em>,
+                        49 (5), 2026.
+                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.2514/1.G009468"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            https://doi.org/10.2514/1.G009468
+                        </a>
+                    </div>
+
+                    <a href="2026%20JGCD%20On%20Manifold%20QPO.pdf"
+                       class="pdf-link"
+                       target="_blank">
+                        Download PDF
+                    </a>
+                </li>
+
+                <!-- Publication 3 -->
+                <li class="pub-item">
+                    <div class="citation">
+                        <strong>Ian M. Down</strong>, Howell, K. C., Majji, M.,
+                        &amp; Alfriend, K. T.,
+                        "The Linear Parametrization of Two Dimensional Tori Families in the Restricted Three Body Problem,"
+                        <em>The Journal of the Astronautical Sciences</em>,
+                        73 (2), 12, 2026.
+                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1007/s40295-025-00567-7"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            https://doi.org/10.1007/s40295-025-00567-7
+                        </a>
+                    </div>
+
+                    <a href="2026%20JAS%20Linear%20Parametrization%20of%20Tori.pdf"
+                       class="pdf-link"
+                       target="_blank">
+                        Download PDF
+                    </a>
+                </li>
+
+                <!-- Publication 2 -->
+                <li class="pub-item">
+                    <div class="citation">
+                        McElreath, J., <strong>Ian M. Down</strong>, &amp; Majji, M.,
+                        "A Universal Approach for Solving the Multi-Revolution Lambert’s Problem,"
+                        <em>Celestial Mechanics and Dynamical Astronomy</em>,
+                        137 (4), 22, 2025.
+                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1007/s10569-025-10251-5"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            https://doi.org/10.1007/s10569-025-10251-5
+                        </a>
+                    </div>
+
+                    <a href="2025%20CMDA%20Universal%20Lambert.pdf"
+                       class="pdf-link"
+                       target="_blank">
+                        Download PDF
+                    </a>
+                </li>
+
+                <!-- Publication 1 -->
+                <li class="pub-item">
+                    <div class="citation">
+                        <strong>Ian M. Down</strong>, van Wijk, D. E.,
+                        Parikh, D., &amp; Majji, M.,
+                        "Autonomous Satellite Servicing Infrastructure for In-Space Assembly and Manufacturing,"
+                        <em>Journal of Manufacturing Science and Engineering</em>,
+                        146 (12), 121008, 2024.
+                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1115/1.4067447"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            https://doi.org/10.1115/1.4067447
+                        </a>
+                    </div>
+
+                    <a href="2024%20JMSE%20TPODS%20GNC.pdf"
+                       class="pdf-link"
+                       target="_blank">
+                        Download PDF
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
 </html>
