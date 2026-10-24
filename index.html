@@ -3,307 +3,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ian M. Down, Ph.D. | Aerospace Engineering</title>
+    <title>Ian M. Down, Ph.D. | Astrodynamics Engineer</title>
+    <meta name="description" content="Ian M. Down, Ph.D. — Astrodynamics Engineer at Advanced Space, LLC. Journal publications and papers under review.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-blue: #00008B;
-            --text-dark: #333333;
-            --bg-light: #f8f9fa;
-            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05),
-                            0 1px 3px rgba(0, 0, 0, 0.1);
+            --bg: #16191d;
+            --text: #e4e7eb;
+            --text-soft: #c3c8cf;
+            --muted: #8d949e;
+            --line: #2a2f36;
+            --accent: #6b8be0;
+            --ink: #0f1114;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+        * {
             box-sizing: border-box;
         }
 
-        .container {
-            width: 100%;
-            max-width: 800px;
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .profile-card {
-            background: #ffffff;
-            padding: 35px 40px;
-            border-radius: 12px;
-            box-shadow: var(--card-shadow);
-            text-align: center;
-            border-top: 5px solid var(--primary-blue);
-            margin-bottom: 40px;
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .layout {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 56px 32px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        /* Sidebar: photo, title, education, profile links */
+
+        aside {
+            position: sticky;
+            top: 56px;
+        }
+
+        .headshot {
+            width: 100%;
+            max-width: 240px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            object-position: 50% 35%;
+            border-radius: 8px;
+            display: block;
         }
 
         h1 {
-            font-size: 2.2rem;
-            margin: 0 0 16px 0;
-            color: #111111;
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin: 22px 0 2px;
         }
 
-        .degree-block {
+        .role {
+            color: var(--muted);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 28px 0 10px;
+        }
+
+        .degree {
             margin-bottom: 12px;
         }
 
-        .degree-block:last-of-type {
-            margin-bottom: 0;
-        }
-
-        .degree-title {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: #222222;
-            margin: 0 0 2px 0;
-        }
-
-        .institution {
+        .degree b {
+            display: block;
+            font-weight: 500;
             font-size: 0.95rem;
-            color: var(--primary-blue);
-            margin: 0;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        .publications-section {
-            background: #ffffff;
-            padding: 30px 40px;
-            border-radius: 12px;
-            box-shadow: var(--card-shadow);
+        .degree span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .profiles {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 240px;
+        }
+
+        .profiles a {
+            display: block;
+            padding: 8px 12px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .profiles a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Publications */
+
+        main section + section {
+            margin-top: 56px;
         }
 
         h2 {
-            font-size: 1.5rem;
-            color: var(--primary-blue);
-            margin-top: 0;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 10px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0 0 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
         }
 
         .pub-list {
             list-style: none;
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
 
         .pub-item {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            flex-direction: column;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--line);
         }
 
         .pub-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
             border-bottom: none;
         }
 
         .citation {
-            font-size: 1.05rem;
-            line-height: 1.6;
-            color: #444444;
-            margin-bottom: 12px;
+            color: var(--text-soft);
         }
 
-        .citation a {
-            color: var(--primary-blue);
-            text-decoration: none;
+        .citation strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px 16px;
+            margin-top: 6px;
+            color: var(--text-soft);
+        }
+
+        .pub-links .doi {
+            min-width: 0;
+        }
+
+        .pub-links .doi a {
             word-break: break-all;
         }
 
-        .citation a:hover {
-            text-decoration: underline;
-        }
-
         .pdf-link {
-            align-self: flex-start;
-            display: inline-flex;
-            align-items: center;
-            background-color: var(--primary-blue);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 6px 14px;
-            font-size: 0.85rem;
+            flex-shrink: 0;
+            background: var(--accent);
+            color: var(--ink);
+            font-size: 0.7rem;
             font-weight: 600;
+            line-height: 1.4;
+            padding: 2px 8px;
             border-radius: 4px;
-            transition: background-color 0.2s ease;
+            transition: opacity 0.15s;
         }
 
         .pdf-link:hover {
-            background-color: #000066;
+            opacity: 0.85;
+            text-decoration: none;
+        }
+
+        @media (max-width: 860px) {
+            .layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 32px 16px;
+            }
+
+            aside {
+                position: static;
+                display: grid;
+                grid-template-columns: 96px 1fr;
+                gap: 0 20px;
+                align-items: center;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            .sidebar-details {
+                grid-column: 1 / -1;
+            }
+
+            .profiles {
+                flex-direction: row;
+                flex-wrap: wrap;
+                max-width: none;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="layout">
 
-        <!-- Profile Header -->
-        <div class="profile-card">
+        <aside>
+            <img class="headshot" src="photos/headshot.jpg" alt="Ian M. Down">
 
-            <h1>Ian M. Down, Ph.D.</h1>
-
-            <!-- PhD Info -->
-            <div class="degree-block">
-                <div class="degree-title">
-                    Ph.D. in Aerospace Engineering, 2025
-                </div>
-                <div class="institution">
-                    Texas A&amp;M University
-                </div>
+            <div>
+                <h1>Ian M. Down, Ph.D.</h1>
+                <p class="role">
+                    Astrodynamics Engineer,
+                    <a href="https://advancedspace.com/" target="_blank" rel="noopener noreferrer">Advanced Space, LLC</a>
+                </p>
             </div>
 
-            <!-- BS Info -->
-            <div class="degree-block">
-                <div class="degree-title">
-                    B.S. in Aerospace Engineering, 2021
+            <div class="sidebar-details">
+                <div class="label">Education</div>
+
+                <div class="degree">
+                    <b>Ph.D., Aerospace Engineering</b>
+                    <span>Texas A&amp;M University, 2025</span>
                 </div>
-                <div class="institution">
-                    University of Maryland
+
+                <div class="degree">
+                    <b>B.S., Aerospace Engineering</b>
+                    <span>University of Maryland, 2021</span>
+                    <span>Summa Cum Laude</span>
+                    <span>Aerospace Honors</span>
+                </div>
+
+                <div class="label">Profiles</div>
+
+                <div class="profiles">
+                    <a href="https://www.linkedin.com/in/ian-down-aerospace" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=kjGWCfIAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                    <a href="https://orcid.org/0000-0002-2535-9226" target="_blank" rel="noopener noreferrer">ORCID</a>
                 </div>
             </div>
+        </aside>
 
-        </div>
+        <main>
 
-        <!-- Publications Section -->
-        <div class="publications-section">
+            <section>
+                <h2>Under Review</h2>
 
-            <h2>Select Journal Publications</h2>
+                <ul class="pub-list">
 
-            <ul class="pub-list">
+                    <li class="pub-item">
+                        <div class="citation">
+                            <strong>Down, I. M.</strong>, McElreath, J., &amp; Majji, M.,
+                            &ldquo;Eclipse Observables for Navigation in Cislunar Space,&rdquo;
+                            submitted to <em>Journal of Spacecraft and Rockets</em>, 2026.
+                        </div>
+                        <div class="pub-links">
+                            <span class="doi">
+                                arXiv:
+                                <a href="https://arxiv.org/abs/2610.28669" target="_blank" rel="noopener noreferrer">https://arxiv.org/abs/2610.28669</a>
+                            </span>
+                            <a class="pdf-link" href="preprint_papers/2026%20JSR%20Eclipse%20Nav.pdf" target="_blank">Download PDF</a>
+                        </div>
+                    </li>
 
-                <!-- Publication 5 -->
-                <li class="pub-item">
-                    <div class="citation">
-                        Ahrens, T. L., <strong>Down, I. M.</strong>, &amp; Majji, M.,
-                        "Direct Pseudospectral Optimal Control by Orthogonal Polynomial Integral Collocation,"
-                        <em>Journal of Guidance, Control, and Dynamics</em>,
-                        49 (5), 1388-1403, 2026.
-                        <br>
-                        DOI:
-                        <a href="https://doi.org/10.2514/1.G008845"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            https://doi.org/10.2514/1.G008845
-                        </a>
-                    </div>
+                </ul>
+            </section>
 
-                    <a href="2026%20JGCD%20DOPIC.pdf"
-                       class="pdf-link"
-                       target="_blank">
-                        Download PDF
-                    </a>
-                </li>
+            <section>
+                <h2>Journal Publications</h2>
 
-                <!-- Publication 4 -->
-                <li class="pub-item">
-                    <div class="citation">
-                        <strong>Down, I. M.</strong>, Majji, M., &amp; Howell, K. C.,
-                        "On-Manifold Low-Thrust Rephasing of Quasi-Periodic Orbits,"
-                        <em>Journal of Guidance, Control, and Dynamics</em>,
-                        49 (5), 1300-1316, 2026.
-                        <br>
-                        DOI:
-                        <a href="https://doi.org/10.2514/1.G009468"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            https://doi.org/10.2514/1.G009468
-                        </a>
-                    </div>
+                <ul class="pub-list">
 
-                    <a href="2026%20JGCD%20On%20Manifold%20QPO.pdf"
-                       class="pdf-link"
-                       target="_blank">
-                        Download PDF
-                    </a>
-                </li>
+                    <li class="pub-item">
+                        <div class="citation">
+                            Ahrens, T. L., <strong>Down, I. M.</strong>, &amp; Majji, M.,
+                            &ldquo;Direct Pseudospectral Optimal Control by Orthogonal Polynomial Integral Collocation,&rdquo;
+                            <em>Journal of Guidance, Control, and Dynamics</em>, 49 (5), 1388&ndash;1403, 2026.
+                        </div>
+                        <div class="pub-links">
+                            <span class="doi">
+                                DOI:
+                                <a href="https://doi.org/10.2514/1.G008845" target="_blank" rel="noopener noreferrer">https://doi.org/10.2514/1.G008845</a>
+                            </span>
+                            <a class="pdf-link" href="journal_papers/2026%20JGCD%20DOPIC.pdf" target="_blank">Download PDF</a>
+                        </div>
+                    </li>
 
-                <!-- Publication 3 -->
-                <li class="pub-item">
-                    <div class="citation">
-                        <strong>Down, I. M.</strong>, Howell, K. C., Majji, M.,
-                        &amp; Alfriend, K. T.,
-                        "The Linear Parametrization of Two Dimensional Tori Families in the Restricted Three Body Problem,"
-                        <em>The Journal of the Astronautical Sciences</em>,
-                        73 (2), 12, 2026.
-                        <br>
-                        DOI:
-                        <a href="https://doi.org/10.1007/s40295-025-00567-7"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            https://doi.org/10.1007/s40295-025-00567-7
-                        </a>
-                    </div>
+                    <li class="pub-item">
+                        <div class="citation">
+                            <strong>Down, I. M.</strong>, Majji, M., &amp; Howell, K. C.,
+                            &ldquo;On-Manifold Low-Thrust Rephasing of Quasi-Periodic Orbits,&rdquo;
+                            <em>Journal of Guidance, Control, and Dynamics</em>, 49 (5), 1300&ndash;1316, 2026.
+                        </div>
+                        <div class="pub-links">
+                            <span class="doi">
+                                DOI:
+                                <a href="https://doi.org/10.2514/1.G009468" target="_blank" rel="noopener noreferrer">https://doi.org/10.2514/1.G009468</a>
+                            </span>
+                            <a class="pdf-link" href="journal_papers/2026%20JGCD%20On%20Manifold%20QPO.pdf" target="_blank">Download PDF</a>
+                        </div>
+                    </li>
 
-                    <a href="2026%20JAS%20Linear%20Parametrization%20of%20Tori.pdf"
-                       class="pdf-link"
-                       target="_blank">
-                        Download PDF
-                    </a>
-                </li>
+                    <li class="pub-item">
+                        <div class="citation">
+                            <strong>Down, I. M.</strong>, Howell, K. C., Majji, M., &amp; Alfriend, K. T.,
+                            &ldquo;The Linear Parametrization of Two Dimensional Tori Families in the Restricted Three Body Problem,&rdquo;
+                            <em>The Journal of the Astronautical Sciences</em>, 73 (2), 12, 2026.
+                        </div>
+                        <div class="pub-links">
+                            <span class="doi">
+                                DOI:
+                                <a href="https://doi.org/10.1007/s40295-025-00567-7" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s40295-025-00567-7</a>
+                            </span>
+                            <a class="pdf-link" href="journal_papers/2026%20JAS%20Linear%20Parametrization%20of%20Tori.pdf" target="_blank">Download PDF</a>
+                        </div>
+                    </li>
 
-                <!-- Publication 2 -->
-                <li class="pub-item">
-                    <div class="citation">
-                        McElreath, J., <strong>Down, I. M.</strong>, &amp; Majji, M.,
-                        "A Universal Approach for Solving the Multi-Revolution Lambert’s Problem,"
-                        <em>Celestial Mechanics and Dynamical Astronomy</em>,
-                        137 (4), 22, 2025.
-                        <br>
-                        DOI:
-                        <a href="https://doi.org/10.1007/s10569-025-10251-5"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            https://doi.org/10.1007/s10569-025-10251-5
-                        </a>
-                    </div>
+                    <li class="pub-item">
+                        <div class="citation">
+                            McElreath, J., <strong>Down, I. M.</strong>, &amp; Majji, M.,
+                            &ldquo;A Universal Approach for Solving the Multi-Revolution Lambert&rsquo;s Problem,&rdquo;
+                            <em>Celestial Mechanics and Dynamical Astronomy</em>, 137 (4), 22, 2025.
+                        </div>
+                        <div class="pub-links">
+                            <span class="doi">
+                                DOI:
+                                <a href="https://doi.org/10.1007/s10569-025-10251-5" target="_blank" rel="noopener noreferrer">https://doi.org/10.1007/s10569-025-10251-5</a>
+                            </span>
+                            <a class="pdf-link" href="journal_papers/2025%20CMDA%20Universal%20Lambert.pdf" target="_blank">Download PDF</a>
+                        </div>
+                    </li>
 
-                    <a href="2025%20CMDA%20Universal%20Lambert.pdf"
-                       class="pdf-link"
-                       target="_blank">
-                        Download PDF
-                    </a>
-                </li>
+                    <li class="pub-item">
+                        <div class="citation">
+                            <strong>Down, I. M.</strong>, van Wijk, D. E., Parikh, D., &amp; Majji, M.,
+                            &ldquo;Autonomous Satellite Servicing Infrastructure for In-Space Assembly and Manufacturing,&rdquo;
+                            <em>Journal of Manufacturing Science and Engineering</em>, 146 (12), 121008, 2024.
+                        </div>
+                        <div class="pub-links">
+                            <span class="doi">
+                                DOI:
+                                <a href="https://doi.org/10.1115/1.4067447" target="_blank" rel="noopener noreferrer">https://doi.org/10.1115/1.4067447</a>
+                            </span>
+                            <a class="pdf-link" href="journal_papers/2024%20JMSE%20TPODS%20GNC.pdf" target="_blank">Download PDF</a>
+                        </div>
+                    </li>
 
-                <!-- Publication 1 -->
-                <li class="pub-item">
-                    <div class="citation">
-                        <strong>Down, I. M.</strong>, van Wijk, D. E.,
-                        Parikh, D., &amp; Majji, M.,
-                        "Autonomous Satellite Servicing Infrastructure for In-Space Assembly and Manufacturing,"
-                        <em>Journal of Manufacturing Science and Engineering</em>,
-                        146 (12), 121008, 2024.
-                        <br>
-                        DOI:
-                        <a href="https://doi.org/10.1115/1.4067447"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            https://doi.org/10.1115/1.4067447
-                        </a>
-                    </div>
+                </ul>
+            </section>
 
-                    <a href="2024%20JMSE%20TPODS%20GNC.pdf"
-                       class="pdf-link"
-                       target="_blank">
-                        Download PDF
-                    </a>
-                </li>
-
-            </ul>
-
-        </div>
+        </main>
 
     </div>
 
